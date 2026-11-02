@@ -43,18 +43,49 @@
             </div>
         </div>
     </div>
-
     <div class="card">
         <h3>Product Details</h3>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis officiis at sed, consequatur exercitationem quidem, ab provident molestiae quos minima aliquam.
-          <span id="more"> Assumenda neque alias eum voluptates corporis? Nam aut perspiciatis ex consequatur fugit illo iste enim adipisci delectus deserunt molestiae nemo iure, facilis ipsum. At inventore in, consequuntur assumenda, perspiciatis reprehenderit iste quasi facere odio, deserunt eaque rem doloribus eum?</span>
-        </p>
+        <p id="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam assumenda commodi distinctio mollitia ipsa fugit autem tenetur voluptatem ea similique nemo ratione,</p>
     
-        <button id="btn" onclick="toggleText()">Read more</button>
+        <button id="link" onclick="toggleText()">See more</button>
       </div>
 
 
+
+      <h2>Add New Student</h2>
+    <form id="StudentForm" onsubmit="addStudent(event)">
+        <label>Name:</label>
+        <input type="text" id="studentName" required>
+        <label>Age:</label>
+        <input type="number" id="studentAge" required>
+        <button type="submit">Add Student</button>
+    </form>
+
+    <h2>Student Records</h2>
+    <table width="500" border="2">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+           
+        </tbody>
+    </table>
+
+    <div id="editForm">
+        <h2>Edit Student Details</h2>
+        <form id="editStudentForm" onsubmit="saveChanges(event)">
+            <label>Name:</label>
+            <input type="text" id="editName" required>
+            <label>Age:</label>
+            <input type="number" id="editAge" required>
+            <button type="submit">Save Changes</button>
+            <button type="button" onclick="closeEditForm()">Cancel</button>
+        </form>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
